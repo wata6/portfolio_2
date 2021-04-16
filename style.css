@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* * * * * * * * *
-* base
+* base  111
 * * * * * * * * */
 
 *, *::before, *::after {
@@ -28,63 +28,18 @@ section {
   text-align: center;
 }
 
-tbody {
-  vertical-align: inherit;
-}
-th, td {
-  font-weight: normal;
-  padding: 0;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style-type: none;
-}
-/* * * * * * * * *
-* utility
-* * * * * * * * */
 .u-content-wrapper {
   max-width: 960px;
   margin: 0 auto;
 }
-.u-heading {
-  position: relative;
-  margin-bottom: 32px;
-  padding-bottom: 24px;
-  font-size: 36px;
-  letter-spacing: 2px;
-}
-.u-heading::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 40px;
-  height: 1px;
-  background: #2b2b2b;
-  transform: translateX(-50%);
-}
-.u-text {
-  padding-bottom: 40px;
-  line-height: 1.8;
-  letter-spacing: 1.4px;
-}
-
-/* * * * * * * * *
-* header
-* * * * * * * * */
-
 .header {
   position: relative;
   width: 100%;
   height: 620px;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('img/header.png');
+  background: url('img/header.png');
   background-size: cover;
   text-align: center;
   color: #fff;
-  font-family: myriad-pro, sans-serif;
 }
 
 .header__nav {
@@ -93,18 +48,6 @@ li {
   left: 0;
   width: 100%;
   height: 64px;
-}
-
-.position-change {
-  position: fixed;
-  top: 0;
-  z-index: 100;
-}
-.color-chnage {
-  color: #2b2b2b;
-  background: #fff;
-  border-bottom: 1px solid #a0a0a0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .header__nav__wrapper {
@@ -116,16 +59,17 @@ li {
 .header__nav__logo {
   font-size: 36px;
 }
+
 .hamburger-menu {
   position: relative;
   width: 32px;
   height: 64px;
   cursor: pointer;
 }
+
 .hamburger-menu__line,
 .hamburger-menu__line::before,
-.hamburger-menu__line::after,
-.hamburger-menu__line--dummy {
+.hamburger-menu__line::after {
   position: absolute;
   left: 0;
   display: block;
@@ -133,96 +77,53 @@ li {
   height: 1px;
   background: #fff;
 }
-.color-chnage span,
-.color-chnage span::before,
-.color-chnage span::after {
-  background: #2b2b2b;
-}
+
 .hamburger-menu__line::before,
 .hamburger-menu__line::after {
-  content: '';
+  content: "";
 }
 
-.hamburger-menu__line,
-.hamburger-menu__line--dummy {
+.hamburger-menu__line {
   top: 50%;
-  transition: all .3s;
-}
-
-.active .hamburger-menu__line {
-  transform: rotate(-45deg);
-}
-.active .hamburger-menu__line--dummy {
-  transform: rotate(45deg);
 }
 
 .hamburger-menu__line::before {
   top: calc(50% - 8px);
-  transition: all .3s;
-}
-.active .hamburger-menu__line::before {
-  top: 50%;
-  opacity: 0;
 }
 
 .hamburger-menu__line::after {
   top: calc(50% + 8px);
-  transition: all .3s;
-}
-.active .hamburger-menu__line::after {
-  top: 50%;
-  opacity: 0;
 }
 
-.header-menu {
-  position: absolute;
-  top: 64px;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  height: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: hidden;
-  background: rgba(255, 255, 255, .9);
-  transition: all .3s;
-}
-.header__menu__item {
-  padding: 0;
-  line-height: 11vh;
-  text-align: center;
-  font-size: 18px;
-  border-top: 1px solid #ccc;
-}
-.header__menu__item:last-of-type {
-  border-bottom: 1px solid #ccc;
-}
-.height-change {
-  height: calc(100vh - 64px);
-}
-
-.header__title {
-  padding-top: 240px;
-  font-size: 120px;
-  font-weight: normal;
-}
-.header__title__sub {
-  word-spacing: 4px;
-}
-.header__title__sub::before,
-.header__title__sub::after {
-  content: '';
-  display: inline-block;
-  width: 12px;
-  height: 2px;
-  margin: 0 8px;
-  background: #fff;
-  vertical-align: middle;
-}
 /* * * * * * * * *
-* Concept
+* utility
 * * * * * * * * */
+
+.u-heading {
+  position: relative;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+.u-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 40px;
+  height: 1px;
+  background: #2b2b2b;
+  transform: translateX(-50%);
+}
+
+.u-text {
+  padding-bottom: 40px;
+  line-height: 1.8;
+  letter-spacing: 1.4px;
+}
+
 .concept {
   width: 100%;
   padding: 80px 0;
